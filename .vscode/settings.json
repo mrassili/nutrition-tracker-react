@@ -1,0 +1,8 @@
+{
+  "eslint.packageManager": "yarn",
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": ["./src"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.enable": true,
+  "eslint.run": "onType"
+}
