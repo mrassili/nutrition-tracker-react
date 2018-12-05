@@ -1,15 +1,13 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = merge(common, {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    watchContentBase: true,
+    hot: true,
   },
-  optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({})],
-  },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
 });
