@@ -1,10 +1,43 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr);
+  grid-template-rows: 70px minmax(400px, 4fr);
   background-color: rgb(51, 95, 68);
+  height: 100vh;
 }
 .logo,
 .header,
-.content {
-  text-align: center;
+.content,
+.sidebar {
+  display: grid;
+  border: 1px solid yellow;
+}
+
+.logo > h1 {
+  font-size: 20px;
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+
+.header > h2 {
+  display: inline;
+  font-size: 16px;
+  color: white;
+  font-weight: 200;
+  justify-self: center;
+  align-self: center;
+}
+
+.header > h2 > i {
+  color: white;
+  font-size: 20px;
+}
+
+.header {
+  grid-template-columns: min-content 70px min-content;
+  grid-template-rows: min-content;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
