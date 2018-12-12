@@ -1,0 +1,32 @@
+.header {
+  display: grid;
+  box-shadow: 5px 1px 6px 0 #dadddd;
+  border-bottom: 1px solid #dadddd;
+  grid-template-columns: max-content 70px max-content;
+  grid-template-rows: min-content;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.header > h2 {
+  display: inline;
+  font-size: 1rem;
+  justify-self: center;
+  align-self: center;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.leftAngleIcon {
+  justify-self: right;
+}
+
+.rightAngleIcon {
+  justify-self: left;
+}
+
+.date {
+  grid-column: 1/4;
+  color: #707c80;
+}

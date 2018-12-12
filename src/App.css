@@ -2,15 +2,14 @@
 
 html {
   box-sizing: border-box;
+  background-color: white;
+  font-family: "Montserrat";
+  color: #373d3f;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-body {
-  font-family: "Montserrat";
 }
 
 /* montserrat-regular */

@@ -1,43 +1,24 @@
 .container {
   display: grid;
-  grid-template-columns: minmax(150px, 1fr) minmax(400px, 4fr);
-  grid-template-rows: 70px minmax(400px, 4fr);
-  background-color: rgb(51, 95, 68);
+  grid-template-columns: minmax(max-content, 15%) minmax(max-content, 4fr);
+  grid-template-rows: 60px minmax(400px, 4fr);
   height: 100vh;
+  border-top: 5px solid #009261;
 }
-.logo,
-.header,
-.content,
-.sidebar {
+
+.logo {
   display: grid;
-  border: 1px solid yellow;
+  border-bottom: 1px solid #dadddd;
+}
+
+.content {
+  display: grid;
+  justify-content: center;
 }
 
 .logo > h1 {
-  font-size: 20px;
-  color: white;
+  font-size: 1.5rem;
   justify-self: center;
   align-self: center;
-}
-
-.header > h2 {
-  display: inline;
-  font-size: 16px;
-  color: white;
-  font-weight: 200;
-  justify-self: center;
-  align-self: center;
-}
-
-.header > h2 > i {
-  color: white;
-  font-size: 20px;
-}
-
-.header {
-  grid-template-columns: min-content 70px min-content;
-  grid-template-rows: min-content;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  margin: auto 0.5em;
 }
