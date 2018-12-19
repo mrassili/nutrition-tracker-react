@@ -1,24 +1,4 @@
-.container {
-  display: grid;
-  grid-template-columns: minmax(max-content, 15%) minmax(max-content, 4fr);
-  grid-template-rows: 60px minmax(400px, 4fr);
-  height: 100vh;
-  border-top: 5px solid #009261;
-}
-
-.logo {
-  display: grid;
-  border-bottom: 1px solid #dadddd;
-}
-
 .content {
   display: grid;
   justify-content: center;
-}
-
-.logo > h1 {
-  font-size: 1.5rem;
-  justify-self: center;
-  align-self: center;
-  margin: auto 0.5em;
 }

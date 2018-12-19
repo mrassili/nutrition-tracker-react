@@ -6,7 +6,10 @@
     "prettier",
     "prettier/react"
   ],
-  "rules": {},
+  "rules": {
+    "react/prop-types": 0,
+    "no-console": 1
+  },
   "plugins": ["react", "jsx-a11y"],
   "parserOptions": {
     "ecmaVersion": 6,

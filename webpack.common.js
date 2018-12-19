@@ -5,6 +5,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   template: path.resolve(__dirname, "src", "index.html"),
   filename: "index.html",
   inject: "body",
+  favicon: "./src/favicon.ico",
 });
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
+    publicPath: "/",
   },
   plugins: [HTMLWebpackPluginConfig],
   module: {
@@ -46,7 +48,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif|svg|ico)$/,
         use: [
           {
             loader: "file-loader",

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Dashboard.css";
 
-const Dashboard = () => {
+const Settings = () => {
   return (
     <div className={styles.content}>
-      <h1>Dashboard</h1>
+      <h1>Settings</h1>
     </div>
   );
 };
 
-export default Dashboard;
+export default Settings;
