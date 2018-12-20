@@ -1,7 +1,4 @@
 import React from "react";
-//import HomeButton from "./HomeButton";
-//import FoodLogButton from "./FoodLogButton";
-//import SettingsButton from "./SettingsButton";
 import styles from "./Sidebar.css";
 import avatar from "../images/avatar.png";
 import classnames from "classnames";
