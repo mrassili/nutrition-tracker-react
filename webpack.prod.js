@@ -1,6 +1,7 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
 const TerserPlugin = require("terser-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = merge(common, {
   devtool: "source-map",
@@ -17,4 +18,11 @@ module.exports = merge(common, {
       }),
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: "src/_redirects",
+      },
+    ]),
+  ],
 });
