@@ -2,7 +2,7 @@
   display: grid;
   color: #afd3c8;
   border-right: 1px solid #dadddd;
-  box-shadow: 1px 0px 50px 1px #959696;
+  box-shadow: 25px 0px 30px -8px #80867f4a;
   justify-items: center;
   align-items: flex-start;
   background-color: white;
@@ -65,7 +65,9 @@ ul li a {
   padding: 0.3em;
   border: 2px solid;
   border-color: transparent;
+  border-radius: 35px;
   text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .icon {

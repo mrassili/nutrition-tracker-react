@@ -7,13 +7,15 @@
   "scripts": {
     "start:dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "gh-pages -d dist"
+    "deploy:preview": "netlify deploy --open",
+    "deploy:prod": "netlify deploy --prod"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-trend": "^1.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -31,7 +33,6 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
-    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "prettier": "^1.15.3",

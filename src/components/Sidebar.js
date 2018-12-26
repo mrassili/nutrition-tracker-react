@@ -63,19 +63,21 @@ class Sidebar extends React.Component {
                     icon={faHome}
                     className={classnames(styles.icon, "fa-fw")}
                   />
-                  Home
+                  Overview
                 </NavLink>
               </li>
-              <svg className={classnames(styles.hLine)}>
-                <line
-                  x1="0"
-                  x2="100%"
-                  y1="2"
-                  y2="2"
-                  stroke="#009261b5"
-                  strokeWidth="3"
-                />
-              </svg>
+              <li>
+                <svg className={classnames(styles.hLine)}>
+                  <line
+                    x1="0"
+                    x2="100%"
+                    y1="2"
+                    y2="2"
+                    stroke="#009261b5"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </li>
 
               <li>
                 <NavLink to="/food-log">
@@ -86,16 +88,18 @@ class Sidebar extends React.Component {
                   Food Log
                 </NavLink>
               </li>
-              <svg className={classnames(styles.hLine)}>
-                <line
-                  x1="0"
-                  x2="100%"
-                  y1="2"
-                  y2="2"
-                  stroke="#009261b5"
-                  strokeWidth="3"
-                />
-              </svg>
+              <li>
+                <svg className={classnames(styles.hLine)}>
+                  <line
+                    x1="0"
+                    x2="100%"
+                    y1="2"
+                    y2="2"
+                    stroke="#009261b5"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </li>
               <li>
                 <NavLink to="/settings">
                   <FontAwesomeIcon
