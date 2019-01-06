@@ -5,35 +5,37 @@ import styles from "./App.css"; //eslint-disable-line
 import Overview from "./components/Overview";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import logo from "./images/logo.png";
 import FoodLog from "./components/FoodLog";
 import Settings from "./components/Settings";
+import Logo from "./components/Logo";
+import GetStartedForm from "./components/GetStartedForm";
 
-import { Link } from "@reach/router";
+import { Router, Redirect } from "@reach/router";
 
-import { Router } from "@reach/router";
+const Home = () => {
+  return (
+    <div className={styles.container}>
+      <Logo />
+      <Header />
+      <Sidebar />
+      <Router>
+        <Overview path="/overview" />
+        <FoodLog path="/food-log" />
+        <Settings path="/settings" />
+        <Redirect default from="/" to="/overview" noThrow />
+      </Router>
+    </div>
+  );
+};
 
-class App extends React.Component {
-  render() {
-    return (
-      <div className={styles.container}>
-        <div className={styles.logo}>
-          <Link to="/" className={styles.link}>
-            <img src={logo} alt="logo" id={styles.logo} />
-            Nutrition Tracker
-          </Link>
-        </div>
-        <Header />
-        <Sidebar />
-        <Router>
-          <Overview default path="/" />
-          <FoodLog path="/food-log" />
-          <Settings path="/settings" />
-        </Router>
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <Router>
+      <GetStartedForm path="get-started" />
+      <Home path="/*" />
+    </Router>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById("app"));
 

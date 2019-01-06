@@ -9,18 +9,3 @@
   padding: 1em;
   overflow-y: scroll;
 }
-
-.item {
-  background-color: white;
-  box-shadow: 0 13px 30px -8px #80867f4a;
-  border-radius: 0.5em;
-  border: 1px solid #8e8e8e12;
-}
-
-.item:nth-child(4) {
-  grid-column: span 3;
-}
-
-.trend {
-  height: 100%;
-}

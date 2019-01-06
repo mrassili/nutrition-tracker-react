@@ -58,7 +58,7 @@ class Sidebar extends React.Component {
           <nav className={styles.menu}>
             <ul>
               <li>
-                <NavLink to="/">
+                <NavLink to="/overview">
                   <FontAwesomeIcon
                     icon={faHome}
                     className={classnames(styles.icon, "fa-fw")}
