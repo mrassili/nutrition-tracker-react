@@ -12,14 +12,23 @@ import GetStartedForm from "./components/GetStartedForm";
 
 import { Router, Redirect } from "@reach/router";
 
-const Home = () => {
+const Home = (props) => {
+  const { weight, height, age, gender } = props.location.state;
+  const calorieIntake =
+    10 * weight + 6.25 * height - 5 * age + (gender === "Male" ? 5 : 10) * 1.4;
+  const macros = {
+    protein: Math.floor((0.3 * calorieIntake) / 4),
+    fat: Math.floor((0.3 * calorieIntake) / 9),
+    carb: Math.floor((0.4 * calorieIntake) / 4),
+  };
+
   return (
     <div className={styles.container}>
       <Logo />
       <Header />
-      <Sidebar />
+      <Sidebar data={props.location.state} />
       <Router>
-        <Overview path="/overview" />
+        <Overview path="/overview" macros={macros} />
         <FoodLog path="/food-log" />
         <Settings path="/settings" />
         <Redirect default from="/" to="/overview" noThrow />
@@ -28,14 +37,16 @@ const Home = () => {
   );
 };
 
-const App = () => {
-  return (
-    <Router>
-      <GetStartedForm path="get-started" />
-      <Home path="/*" />
-    </Router>
-  );
-};
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <GetStartedForm path="get-started" />
+        <Home path="/*" />
+      </Router>
+    );
+  }
+}
 
 ReactDOM.render(<App />, document.getElementById("app"));
 

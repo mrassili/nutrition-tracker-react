@@ -1,43 +1,104 @@
 import React from "react";
 import styles from "./GetStartedForm.css";
+import { navigate } from "@reach/router";
 
 class GetStartedForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       fullName: "",
-      genre: "",
+      gender: "",
       age: null,
       height: null,
       weight: null,
     };
   }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const { fullName, gender, age, height, weight } = this.state;
+    if (fullName && gender && age && height && weight) {
+      navigate("/overview", {
+        state: { fullName, gender, age, height, weight },
+      });
+    } else {
+      alert("All fields are required!");
+    }
+  }
+
+  handleNameChange(e) {
+    this.setState({
+      fullName: e.target.value,
+    });
+  }
+
+  handleGenderChange(e) {
+    this.setState({
+      gender: e.target.value,
+    });
+  }
+
+  handleAgeChange(e) {
+    this.setState({
+      age: e.target.value,
+    });
+  }
+
+  handleHeightChange(e) {
+    this.setState({
+      height: e.target.value,
+    });
+  }
+
+  handleWeightChange(e) {
+    this.setState({
+      weight: e.target.value,
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
         <div className={styles.blurredContainer} />
         <div className={styles.container}>
           <h1>Please fill in the informations below to get started!</h1>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={(e) => this.handleSubmit(e)}>
             <label htmlFor="fullName" className={styles.entryLabel}>
-              Full Name :{/* eslint-disable-next-line */}
-              <input type="text" id="fullName" autoFocus />
+              Full Name :{/* eslint-disable */}
+              <input
+                type="text"
+                id="fullName"
+                autoFocus
+                onChange={(e) => this.handleNameChange(e)}
+              />
+              {/* eslint-enable */}
             </label>
             {/* eslint-disable-next-line */}
-            <label htmlFor="genre" className={styles.entryLabel}>
-              Genre :
-              <select id="genre">
+            <label htmlFor="gender" className={styles.entryLabel}>
+              Gender :
+              <select id="gender" onBlur={(e) => this.handleGenderChange(e)}>
                 <option>Male</option>
                 <option>Female</option>
               </select>
             </label>
             <label htmlFor="age" className={styles.entryLabel}>
               Age :
-              <input type="number" placeholder="e.g. 20" min="18" />
+              <input
+                type="number"
+                placeholder="e.g. 20"
+                min="18"
+                onChange={(e) => this.handleAgeChange(e)}
+              />
             </label>
             <label htmlFor="height" className={styles.entryLabel}>
               Height :
-              <input type="number" id="height" placeholder="e.g. 150" min="0" />
+              <input
+                type="number"
+                id="height"
+                placeholder="e.g. 150"
+                min="0"
+                onChange={(e) => this.handleHeightChange(e)}
+              />
               <div className={styles.unitToggle}>
                 <fieldset className={styles.radioSwitch}>
                   <legend>Height Unit</legend>
@@ -55,7 +116,13 @@ class GetStartedForm extends React.Component {
             </label>
             <label htmlFor="weight" className={styles.entryLabel}>
               Weight :
-              <input type="number" id="weight" placeholder="e.g. 160" min="0" />
+              <input
+                type="number"
+                id="weight"
+                placeholder="e.g. 160"
+                min="0"
+                onChange={(e) => this.handleWeightChange(e)}
+              />
               <div className={styles.unitToggle}>
                 <fieldset className={styles.radioSwitch}>
                   <legend>Height Unit</legend>
@@ -71,6 +138,7 @@ class GetStartedForm extends React.Component {
                 </fieldset>
               </div>
             </label>
+            <button className={styles.submitBtn} />
           </form>
         </div>
       </React.Fragment>

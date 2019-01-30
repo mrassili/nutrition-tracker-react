@@ -219,3 +219,7 @@ input[type="radio"] {
 fieldset {
   text-align: center;
 }
+
+.submitBtn {
+  visibility: hidden;
+}

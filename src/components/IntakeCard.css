@@ -1,6 +1,79 @@
 .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   box-shadow: 0 13px 30px -8px #80867f4a;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   border: 1px solid #8e8e8e12;
+}
+
+.item > svg {
+  font-size: 5rem;
+}
+
+.item > p {
+  font-size: 0.9rem;
+  width: 300px;
+}
+
+svg[data-icon="egg"] {
+  color: #022f40;
+}
+
+svg[data-icon="bread-slice"] {
+  color: #38aecc;
+}
+
+svg[data-icon="cheese"] {
+  color: #0090c1;
+}
+
+.item span {
+  color: #4c5d51;
+}
+
+/* meter styling */
+.meter {
+  display: block;
+  margin: 2em auto;
+  background: #efefef;
+  border-radius: 8px;
+  border: 1px solid transparent; /* 2 */
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.15) inset, 0 0 0 1px #333; /* 1 */
+  height: 0.75em;
+  max-width: 10em;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* WebKit */
+.meter::-webkit-meter-bar {
+  background: transparent;
+  border: 1px solid transparent; /* 2 */
+  border-radius: 8px;
+}
+
+.meter::-webkit-meter-optimum-value {
+  border-radius: 8px;
+}
+
+.meter#protein::-webkit-meter-optimum-value {
+  background: #022f40;
+}
+
+.meter#carb::-webkit-meter-optimum-value {
+  background: #38aecc;
+}
+
+.meter#fat::-webkit-meter-optimum-value {
+  background: #0090c1;
+}
+*/ .meter::-moz-meter-bar {
+  border-radius: 8px;
+}
+
+.meter:-moz-meter-optimum::-moz-meter-bar {
+  background: #3c5c00;
 }

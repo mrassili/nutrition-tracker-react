@@ -34,16 +34,22 @@ class Sidebar extends React.Component {
   }
 
   render() {
+    const { fullName, gender, age, height, weight } = this.props.data;
+
     return (
       <div className={styles.sidebar}>
         <div className={styles.sidebarContent}>
           <img className={styles.avatar} alt="avatar" src={avatar} />
           <div className={styles.userInfo}>
-            <span>Full Name</span>
+            <span>{fullName}</span>
             <br />
-            <span>Male | 20 Years</span>
+            <span>
+              {gender} | {age} Years
+            </span>
             <br />
-            <span>Height : 176 | Weight : 80</span>
+            <span>
+              Height : {height} cm | Weight : {weight} Kg
+            </span>
           </div>
           <svg className={classnames(styles.hLine)}>
             <line

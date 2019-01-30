@@ -5,14 +5,14 @@ import Trend from "react-trend";
 const ProteinIntake = () => {
   return (
     <div className={styles.item}>
-      Calorie intake trend over time
+      <h2>Calorie intake trend over time</h2>
       <br />
       <Trend
         smooth
         autoDraw
         autoDrawDuration={3000}
         autoDrawEasing="ease-out"
-        data={[0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]}
+        data={[1750, 1679, 1700, 1788]}
         gradient={["#00935f", "#00ffb2"]}
         radius={10}
         strokeWidth={2}
