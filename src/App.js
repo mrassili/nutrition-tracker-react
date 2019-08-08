@@ -41,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <GetStartedForm path="get-started" />
+        <GetStartedForm path="/" />
         <Home path="/*" />
       </Router>
     );

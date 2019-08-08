@@ -41,14 +41,6 @@
 
 .form input,
 select {
-  /*color: #caffe0;
-  padding: 0.5em;
-  justify-self: flex-end;
-  width: 180px;
-  border-radius: 0.5em;
-  border-width: 0;
-  background: linear-gradient(140deg, #0eca81, #034f21);
-  */
   width: 180px;
   color: #d6d6d638;
   background: none;

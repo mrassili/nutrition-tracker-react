@@ -8,7 +8,7 @@
   ],
   "rules": {
     "react/prop-types": 0,
-    "no-console": 1,
+    "no-console": "warn",
     "jsx-a11y/label-has-for": [
       0,
       {
