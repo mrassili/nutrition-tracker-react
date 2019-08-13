@@ -1,7 +1,8 @@
 # nutrition-tracker-react
 [WIP]
 
-![App demo](https://im.ezgif.com/tmp/ezgif-1-2f17aae7b750.gif)
+![App screenshot](https://res.cloudinary.com/ddbyzw2mz/image/upload/v1565733885/Screen_Shot_2019-08-13_at_11.01.40_PM.png)
+![App homepage](https://res.cloudinary.com/ddbyzw2mz/image/upload/v1565734538/Screen_Shot_2019-08-13_at_11.14.17_PM.png)
 
 This is a nutrition tracking web app that will feature user's nutrients intake control, a database/API of foods to choose from, food logging and weight progress graph.
 
